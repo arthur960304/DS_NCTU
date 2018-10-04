@@ -33,9 +33,9 @@ int FindPath::firstMethod(string ifn, string ofn)
     
     //stack stores coordinate and direction
     stack<pair<pair<int, int>, direct>> stack;
-    int maze[width][height];    //maze stores the whole maze
-    int mark[width][height];    //mark stores the path you went before
-    int start_g = 0, start_h = 0, exit_g = 0, exit_h = 0;
+    
+    int maze[width][height];        //maze stores the whole maze
+    int mark[width][height];        //mark stores the path you went before
     
     //four directions (E, S, W, N)
     move[E].a = 1;
@@ -48,8 +48,8 @@ int FindPath::firstMethod(string ifn, string ofn)
     move[N].b = -1;
     
     //iterate through each element in input file and store into maze array
-    for (int n=0; n<height; ++n){
-        for (int m=0; m<width; ++m){
+    for (n=0; n<height; ++n){
+        for (m=0; m<width; ++m){
             
             inFile1 >> s_input;
             
@@ -105,8 +105,8 @@ int FindPath::firstMethod(string ifn, string ofn)
                 }
                 
                 //output maze array to output file
-                for (int n=0; n<height; ++n){
-                    for (int m=0; m<width; ++m){
+                for (n=0; n<height; ++n){
+                    for (m=0; m<width; ++m){
                         
                         if ((m==start_g) && (n==start_h)){
                             outFileFirstMethod << "S" << " ";
