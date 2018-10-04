@@ -38,7 +38,4 @@ public:
     int BFS(string, string);
 };
 
-
-
-
 #endif /* Header_h */
