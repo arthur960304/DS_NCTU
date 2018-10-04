@@ -33,13 +33,12 @@ int FindPath::BFS(string ifn, string ofn)
     width   = stoi(s_width);
     height  = stoi(s_height);
     
-    int i, j, g, h;
     int dis = 0;                    //distance between current and starting position
     int pathSize;                   //number of steps to the goal
     int lastCol = 0, lastRow = 0;   //last col and row number in the closequeue
     int colDiff, rowDiff;           //difference between last and second last
-    int start_g = 0, start_h = 0, exit_g = 0, exit_h = 0;
     int maze[width][height];        //maze stores the whole maze
+    
     
     deque<pair<pair<int, int>, int>> openQueue;     //dynamic queue
     deque<pair<pair<int, int>, int>> closeQueue;    //store every steps
@@ -57,8 +56,8 @@ int FindPath::BFS(string ifn, string ofn)
     move[N].b = -1;
     
     //iterate through each element in input file and store into maze array
-    for (int n=0; n<height; ++n){
-        for (int m=0; m<width; ++m){
+    for (n=0; n<height; ++n){
+        for (m=0; m<width; ++m){
             inFile2 >> s_input;
             
             if (s_input == "S"){
@@ -79,8 +78,8 @@ int FindPath::BFS(string ifn, string ofn)
     }
     
     //mark all as not visited
-    for (int n=0; n<height; ++n){
-        for (int m=0; m<width; ++m){
+    for (n=0; n<height; ++n){
+        for (m=0; m<width; ++m){
             visited[m][n] = false;
         }
     }
@@ -156,8 +155,8 @@ int FindPath::BFS(string ifn, string ofn)
                 }
                 
                 //output maze array to output file
-                for (int n=0; n<height; ++n){
-                    for (int m=0; m<width; ++m){
+                for (n=0; n<height; ++n){
+                    for (m=0; m<width; ++m){
                         
                         if ((m==start_g) && (n==start_h)){
                             outFileBFS << "S" << " ";
