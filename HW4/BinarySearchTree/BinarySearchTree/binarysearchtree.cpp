@@ -18,7 +18,6 @@ TreeNode* BST::LeftMost(TreeNode *current){
     return current;
 }
 
-
 //Insertion
 void BST::Insert(int val){
     TreeNode *inserted = Search(val);
@@ -113,7 +112,7 @@ TreeNode* BST::Search(int VAL){
 //Preorder traversal
 void BST::PreOrder(TreeNode *current){
     if (current) {
-        cout << current->val << " ";   // V
+        cout << current->val << " ";        // V
         BST::PreOrder(current->left);       // L
         BST::PreOrder(current->right);      // R
     }
