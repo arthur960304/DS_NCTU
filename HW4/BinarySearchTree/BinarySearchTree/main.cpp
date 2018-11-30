@@ -39,7 +39,7 @@ int main(int argc, const char * argv[]) {
             case 3:
                 current = Tree.Search(number);
                 if(current) outFile << current->GetLev() << "\n";
-                else outFile << -1 << "\n"; //the tree has no this key
+                else outFile << -1 << "\n"; //the tree does not have this key
                 break;
             case 4:
                 int value = 0, counter = 0, level = 0;
